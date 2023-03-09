@@ -1,0 +1,22 @@
+[
+    {
+      "href": "google.com",
+      "text": "google"
+    },
+    {
+      "href": "facebook.com",
+      "text": "facebook",
+      "color": "blue"
+    },
+    {
+      "href": "twitter.com",
+      "text": "twitter",
+      "target": "_blank"
+    },
+    {
+      "href": "tiktok.com",
+      "text": "tiktok",
+      "number1": 5,
+      "number2": "2"
+    }
+  ]

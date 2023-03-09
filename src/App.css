@@ -1,38 +1,100 @@
-.App {
+.cubes{
+  display:flex;
+  justify-content: space-between;
+  
+}
+.cube{
+  height: 60vh;
+  width: 30vw;
+  position: absolute;
+  perspective: 1000px;
+  perspective-origin: -50px -50px;
+}
+.cube2{
+  height: 60vh;
+  width: 30vw;
+  position: relative;
+  left:50vw;
+  perspective: 1000px;
+  perspective-origin: -50px -50px;
+}
+.box{
+  height: 250px;
+  width: 250px;
+  position:absolute;
+  top:100px;
+  left:100px;
+  transform-style:preserve-3d;
+}
+
+.rotate {
+  animation: rotateCube 2s ease-in-out forwards;
+  animation-name: rotateCube;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotateCube {
+  0%{
+    transform:rotateX(100deg) rotateY(-100deg);
+  }
+  25%{
+    transform:rotateX(-150deg) rotateY(-100deg);
+  }
+  50%{
+    transform:rotateX(45deg) rotateY(45deg);
+  }
+  75%{
+    transform:rotateX(-45deg) rotateY(-45deg);
+  }
+  100%{
+    transform:rotateX(45deg) rotateY(-45deg);
+  }
+}
+
+.card{
+  height: 250px;
+  width: 250px;
   text-align: center;
+  padding:100px 0px;
+  color:white;
+  background:gray;
+  border:2px solid white;
+  font-size:32px;
+  box-sizing: border-box;
+  position: absolute;
+  transition: all 1s;
+}
+#front{
+  transform:translateZ(125px);
+  background:linear-gradient(#ffff00,#00ec00);
+}
+#back{
+  transform:translateZ(-125px);
+  background:linear-gradient(#151515,#3333ff);
+
+}
+#left{
+  right:125px;
+  transform: rotateY(-90deg);
+  background:linear-gradient(#151515,#ffff00);
+
+}
+#right{
+  left:125px;
+  transform: rotateY(90deg);
+  background:linear-gradient(#ff9999,#ff0000);
+
+}
+#top{
+  bottom:125px;
+  transform: rotateX(90deg);
+  background:linear-gradient(#151515,#ff9999);
+
+}
+#bottom{
+  top:125px;
+  transform: rotateX(-90deg);
+   background:linear-gradient(#151515,#9900cc);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
