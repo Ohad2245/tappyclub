@@ -1,3 +1,8 @@
+.App{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 .cubes{
   display:flex;
   justify-content: space-between;
@@ -66,35 +71,100 @@
 }
 #front{
   transform:translateZ(125px);
-  background:linear-gradient(#ffff00,#00ec00);
+  /* background:linear-gradient(#ffff00,#00ec00); */
 }
 #back{
   transform:translateZ(-125px);
-  background:linear-gradient(#151515,#3333ff);
+  /* background:linear-gradient(#151515,#3333ff); */
 
 }
 #left{
   right:125px;
   transform: rotateY(-90deg);
-  background:linear-gradient(#151515,#ffff00);
+  /* background:linear-gradient(#151515,#ffff00); */
 
 }
 #right{
   left:125px;
   transform: rotateY(90deg);
-  background:linear-gradient(#ff9999,#ff0000);
+  /* background:linear-gradient(#ff9999,#ff0000); */
 
 }
 #top{
   bottom:125px;
   transform: rotateX(90deg);
-  background:linear-gradient(#151515,#ff9999);
+  /* background:linear-gradient(#151515,#ff9999); */
 
 }
 #bottom{
   top:125px;
   transform: rotateX(-90deg);
-   background:linear-gradient(#151515,#9900cc);
+   /* background:linear-gradient(#151515,#9900cc); */
 
 }
+.container{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+}
+.container a{
+  position: relative;
+  width: 200px;
+  height: 60px;
+  display: inline-block;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+  .container a:after,
+ .container a:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:#f00 ;
+  transition: 0.5s;
+}
+.container a:nth-child(1):before, .container a:nth-child(1):after{
+  background: linear-gradient(45deg,#00ccff,#0e1538,#0e1538,#d400d4);
+}
+
+.container a:hover:before{
+  inset:-3px;
+
+}
+.container a:hover:after{
+  inset:-3px;
+  filter:blur(10px);
+}
+.container a span{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: inline-block;
+  background:#0e1538;
+  z-index: 10;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color:#fff;
+  border:1px solid #0f0a29;
+  overflow: hidden;
+}
+.container a span:before{
+  content:'';
+  position: absolute;
+  top:0;
+  left:-50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.075);
+  transform: skew(25deg);
+
+}
+
 

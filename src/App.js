@@ -30,10 +30,8 @@ function App() {
     }
   };
 
- 
   return (
     <div className="App">
-      <h1>Test</h1>
       {json.map((item) => {
         return (
           <div key={item.id}>
@@ -52,6 +50,7 @@ function App() {
           </div>
         );
       })}
+
       <br></br>
       <div className="cubes">
       <div className="cube">
@@ -75,7 +74,10 @@ function App() {
           <div className="card" id="bottom">6</div>
         </div>
 
-        <button onClick={handleClick}>Roll the Cube</button>
+        <div className="container">
+          <a onClick={handleClick}><span>Roll the Cube</span></a>
+
+        </div>
         </div>
     </div>
     </div>
